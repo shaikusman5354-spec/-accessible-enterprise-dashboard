@@ -1,1 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Accessible enterprise dashboard"
+  >
+  <title>Enterprise Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
 
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-content">
+      <a href="index.html" class="logo" aria-label="Dashboard home">
+        Enterprise Dashboard
+      </a>
+
+      <nav aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" aria-current="page">Dashboard</a></li>
+          <li><a href="users.html">Users</a></li>
+          <li><a href="reports.html">Reports</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="layout">
+
+    <aside class="sidebar" aria-label="Dashboard sidebar">
+      <h2>Dashboard Menu</h2>
+
+      <nav aria-label="Dashboard navigation">
+        <ul>
+          <li><a href="index.html" aria-current="page">Overview</a></li>
+          <li><a href="users.html">Users</a></li>
+          <li><a href="reports.html">Reports</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="main-content" class="main-content">
+
+      <header class="page-header">
+        <h1>Dashboard Overview</h1>
+        <p>Monitor your organization's activity and performance.</p>
+      </header>
+
+      <section aria-labelledby="statistics-heading">
+        <h2 id="statistics-heading">Statistics</h2>
+
+        <div class="cards">
+
+          <article class="card">
+            <h3>Total Users</h3>
+            <p class="stat">1,248</p>
+            <p>Active registered users</p>
+          </article>
+
+          <article class="card">
+            <h3>Projects</h3>
+            <p class="stat">86</p>
+            <p>Currently active projects</p>
+          </article>
+
+          <article class="card">
+            <h3>Tasks Completed</h3>
+            <p class="stat">3,421</p>
+            <p>Tasks completed this month</p>
+          </article>
+
+        </div>
+      </section>
+
+      <section aria-labelledby="users-heading">
+        <h2 id="users-heading">Recent Users</h2>
+
+        <div class="table-container">
+          <table>
+            <caption>Recently registered users</caption>
+
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Role</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Aarav Kumar</td>
+                <td>aarav@example.com</td>
+                <td>Developer</td>
+                <td>Active</td>
+              </tr>
+
+              <tr>
+                <td>Priya Sharma</td>
+                <td>priya@example.com</td>
+                <td>Designer</td>
+                <td>Active</td>
+              </tr>
+
+              <tr>
+                <td>Rahul Singh</td>
+                <td>rahul@example.com</td>
+                <td>Manager</td>
+                <td>Inactive</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section aria-labelledby="form-heading">
+        <h2 id="form-heading">Add User</h2>
+
+        <form id="user-form" novalidate>
+
+          <fieldset>
+            <legend>User Information</legend>
+
+            <div class="form-group">
+              <label for="name">Full name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                autocomplete="name"
+                required
+                aria-describedby="name-help"
+              >
+              <small id="name-help">
+                Enter the user's full name.
+              </small>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                required
+                aria-describedby="email-help"
+              >
+              <small id="email-help">
+                Enter a valid email address.
+              </small>
+            </div>
+
+            <div class="form-group">
+              <label for="role">Role</label>
+              <select id="role" name="role" required>
+                <option value="">Select a role</option>
+                <option value="developer">Developer</option>
+                <option value="designer">Designer</option>
+                <option value="manager">Manager</option>
+              </select>
+            </div>
+
+          </fieldset>
+
+          <button type="submit">Add User</button>
+        </form>
+      </section>
+
+      <section aria-labelledby="actions-heading">
+        <h2 id="actions-heading">Actions</h2>
+
+        <button
+          type="button"
+          id="open-modal"
+          aria-haspopup="dialog"
+        >
+          Open confirmation dialog
+        </button>
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Enterprise Dashboard</p>
+  </footer>
+
+  <dialog id="confirmation-dialog" aria-labelledby="dialog-title">
+    <article>
+      <h2 id="dialog-title">Confirm Action</h2>
+
+      <p>
+        Are you sure you want to continue?
+      </p>
+
+      <div class="dialog-actions">
+        <button type="button" id="cancel-dialog">
+          Cancel
+        </button>
+
+        <button type="button" id="confirm-dialog">
+          Confirm
+        </button>
+      </div>
+    </article>
+  </dialog>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
