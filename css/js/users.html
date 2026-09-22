@@ -1,1 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Users - Enterprise Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
 
+<body>
+
+  <a class="skip-link" href="#main-content">
+    Skip to main content
+  </a>
+
+  <header class="site-header">
+    <div class="header-content">
+      <a href="index.html" class="logo">
+        Enterprise Dashboard
+      </a>
+
+      <nav aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="users.html" aria-current="page">Users</a></li>
+          <li><a href="reports.html">Reports</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="layout">
+
+    <aside class="sidebar" aria-label="Dashboard sidebar">
+      <h2>Dashboard Menu</h2>
+
+      <nav aria-label="Dashboard navigation">
+        <ul>
+          <li><a href="index.html">Overview</a></li>
+          <li><a href="users.html" aria-current="page">Users</a></li>
+          <li><a href="reports.html">Reports</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="main-content" class="main-content">
+
+      <header class="page-header">
+        <h1>Users</h1>
+        <p>Manage registered dashboard users.</p>
+      </header>
+
+      <section aria-labelledby="users-table-heading">
+
+        <h2 id="users-table-heading">User Directory</h2>
+
+        <table>
+          <caption>All registered users</caption>
+
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Role</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Aarav Kumar</td>
+              <td>aarav@example.com</td>
+              <td>Developer</td>
+              <td>Active</td>
+            </tr>
+
+            <tr>
+              <td>Priya Sharma</td>
+              <td>priya@example.com</td>
+              <td>Designer</td>
+              <td>Active</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Enterprise Dashboard</p>
+  </footer>
+
+</body>
+</html>
